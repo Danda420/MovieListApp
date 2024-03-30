@@ -9,4 +9,5 @@
     <string name="tahun_release">Tahun Rilis</string>
     <string name="favorite">Favorites</string>
     <string name="no_movie_found">No movie(s) found</string>
+    <string name="no_fav_movies">No Favorite Movie(s) yet...</string>
 </resources>

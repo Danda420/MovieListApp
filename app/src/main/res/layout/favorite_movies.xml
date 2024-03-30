@@ -48,6 +48,17 @@
             </RelativeLayout>
         </com.google.android.material.appbar.MaterialToolbar>
     </com.google.android.material.appbar.AppBarLayout>
+    <TextView
+        android:id="@+id/tv_no_favorite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="250dp"
+        android:layout_marginStart="20dp"
+        android:layout_below="@id/topbar"
+        android:text="@string/no_fav_movies"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:visibility="gone"/>
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
