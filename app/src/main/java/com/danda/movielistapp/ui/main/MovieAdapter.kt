@@ -1,4 +1,4 @@
-package com.danda.movielistapp.ui
+package com.danda.movielistapp.ui.main
 
 import android.view.LayoutInflater
 import android.view.View
@@ -57,5 +57,4 @@ class MovieAdapter(context: MainActivity, private var listMovie: ArrayList<Movie
     init {
         listener = context as FireBaseDataListener
     }
-
 }

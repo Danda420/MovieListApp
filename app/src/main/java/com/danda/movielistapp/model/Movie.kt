@@ -8,7 +8,7 @@ data class Movie(
     var id: String? = null,
     var judul: String? = null,
     var genre: String? = null,
-    var rating: Float? = null,
+    var rating: Double? = null,
     var poster: String? = null,
     var desc: String? = null,
     var director: String? = null,

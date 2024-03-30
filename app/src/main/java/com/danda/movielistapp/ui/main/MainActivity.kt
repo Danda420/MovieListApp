@@ -1,11 +1,10 @@
-package com.danda.movielistapp.ui
+package com.danda.movielistapp.ui.main
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.view.Menu
-import android.widget.SearchView
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.danda.movielistapp.R
@@ -44,15 +43,12 @@ class MainActivity : AppCompatActivity(), MovieAdapter.FireBaseDataListener {
         movieRef.addValueEventListener(object : ValueEventListener {
             override fun onDataChange(snapshot: DataSnapshot) {
                 listMovie = ArrayList()
-                Log.d("Snapshot", "$snapshot")
                 for (movieSnap in snapshot.children) {
                     movieSnap.getValue(Movie::class.java)?.let { movie ->
                         movie.id = movieSnap.key.toString()
                         listMovie.add(movie)
                     }
                 }
-                Log.d("List Film", "$listMovie")
-
 
                 adapter = MovieAdapter(this@MainActivity, listMovie)
                 binding.rvMovie.adapter = adapter
@@ -87,13 +83,25 @@ class MainActivity : AppCompatActivity(), MovieAdapter.FireBaseDataListener {
                     })
                     true
                 }
+                R.id.favorite -> {
+                    startActivity(Intent(this, FavoriteMovies::class.java))
+                    true
+                }
                 else -> false
             }
         }
         return true
     }
 
-
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.favorite -> {
+                startActivity(Intent(this, FavoriteMovies::class.java))
+                return true
+            }
+            else -> return super.onOptionsItemSelected(item)
+        }
+    }
 
     private fun searchMovie(keyword: String?) {
         if (keyword != null) {

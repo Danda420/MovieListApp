@@ -9,7 +9,7 @@
         app:showAsAction="ifRoom|collapseActionView" />
     <item
         android:id="@+id/favorite"
-        android:icon="@drawable/ic_favorite_border"
+        android:icon="@drawable/ic_favorite"
         android:title="@string/favorite"
         app:showAsAction="ifRoom|collapseActionView"/>
 </menu>
