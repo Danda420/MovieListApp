@@ -5,8 +5,6 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.danda.movielistapp.databinding.DetailFavoriteBinding
-import com.danda.movielistapp.databinding.DetailMovieBinding
-import com.danda.movielistapp.model.Movie
 import com.danda.movielistapp.offlinedb.MovieModel
 import com.danda.movielistapp.offlinedb.repository.MovieRepo
 

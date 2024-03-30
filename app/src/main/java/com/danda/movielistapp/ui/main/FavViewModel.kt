@@ -7,8 +7,7 @@ import com.danda.movielistapp.offlinedb.MovieModel
 import com.danda.movielistapp.offlinedb.repository.MovieRepo
 
 class FavViewModel(application: Application) : ViewModel() {
-    private val mMasjidRepository: MovieRepo = MovieRepo(application)
+    private val mMovieRepo: MovieRepo = MovieRepo(application)
 
-
-    fun getAllMember(): LiveData<List<MovieModel>> = mMasjidRepository.getAllMovie()
+    fun getAllMember(): LiveData<List<MovieModel>> = mMovieRepo.getAllMovie()
 }

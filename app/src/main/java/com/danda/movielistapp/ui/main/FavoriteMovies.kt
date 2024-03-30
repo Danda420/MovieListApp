@@ -11,7 +11,6 @@ import com.danda.movielistapp.databinding.FavoriteMoviesBinding
 import com.danda.movielistapp.helper.FavViewModelFactory
 import com.danda.movielistapp.offlinedb.MovieModel
 import com.danda.movielistapp.offlinedb.repository.MovieRepo
-import com.danda.movielistapp.ui.detail.MovieViewModel
 
 class FavoriteMovies : AppCompatActivity() {
     private lateinit var binding: FavoriteMoviesBinding

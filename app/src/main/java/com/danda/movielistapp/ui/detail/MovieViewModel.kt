@@ -13,16 +13,4 @@ class MovieViewModel(application: Application) : AndroidViewModel(application) {
     init {
         allMovies = repository.getAllMovie()
     }
-
-    fun insert(movie: MovieModel) {
-        repository.insert(movie)
-    }
-
-    fun delete(movie: MovieModel) {
-        repository.delete(movie)
-    }
-
-    fun getMovieByTitle(title: String): LiveData<MovieModel?> {
-        return repository.getMovieByTitle(title)
-    }
 }

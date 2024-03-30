@@ -12,7 +12,6 @@ class FavViewModelFactory private constructor(private val mApplication: Applicat
         @Volatile
         private var INSTANCE: FavViewModelFactory? = null
 
-
         @JvmStatic
         fun getInstance(application: Application): FavViewModelFactory {
             if (INSTANCE == null) {
@@ -23,7 +22,6 @@ class FavViewModelFactory private constructor(private val mApplication: Applicat
             return INSTANCE as FavViewModelFactory
         }
     }
-
 
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {

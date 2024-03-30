@@ -28,8 +28,4 @@ class MovieRepo(application: Application) {
     fun delete(movie: MovieModel) {
         executorService.execute { mMovieDao.delete(movie) }
     }
-
-    fun getMovieByTitle(title: String): LiveData<MovieModel?> {
-        return mMovieDao.getMovieByTitle(title)
-    }
 }
