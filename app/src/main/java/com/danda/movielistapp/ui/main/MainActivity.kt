@@ -1,11 +1,11 @@
 package com.danda.movielistapp.ui.main
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.danda.movielistapp.R
 import com.danda.movielistapp.databinding.ActivityMainBinding
@@ -18,6 +18,7 @@ import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
 import com.google.firebase.database.database
+
 
 class MainActivity : AppCompatActivity(), MovieAdapter.FireBaseDataListener {
     private lateinit var binding: ActivityMainBinding
@@ -34,6 +35,8 @@ class MainActivity : AppCompatActivity(), MovieAdapter.FireBaseDataListener {
         setContentView(binding.root)
         binding.rvMovie.layoutManager = LinearLayoutManager(this)
         binding.rvMovie.setHasFixedSize(true)
+        val toolbar = findViewById<MaterialToolbar>(R.id.toolbar)
+        toolbar.title = ""
 
         mToolbar = binding.toolbar
         setSupportActionBar(mToolbar)

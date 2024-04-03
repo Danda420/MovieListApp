@@ -33,12 +33,13 @@
             android:layout_marginEnd="16dp"
             android:layout_marginTop="16dp"
             android:background="?attr/selectableItemBackgroundBorderless"
-            android:src="@drawable/ic_arrow_back" />
+            android:src="@drawable/ic_arrow_back"
+            app:tint="@color/material_dynamic_primary80"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Detail Movie"
-            android:textColor="@color/material_dynamic_primary50"
+            android:textColor="@color/material_dynamic_primary80"
             android:textSize="20sp"
             android:textStyle="bold"/>
     </com.google.android.material.appbar.MaterialToolbar>
@@ -163,7 +164,8 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/material_dynamic_primary50"
+        android:backgroundTint="@color/material_dynamic_primary60"
         app:icon="@drawable/ic_favorite"
+        app:iconTint="@color/material_dynamic_neutral95"
         app:shapeAppearanceOverlay="@style/Circle"/>
 </RelativeLayout>

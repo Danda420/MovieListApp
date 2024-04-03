@@ -6,10 +6,12 @@
         android:icon="@drawable/ic_search"
         android:title="@string/search"
         app:actionViewClass="androidx.appcompat.widget.SearchView"
-        app:showAsAction="ifRoom|collapseActionView" />
+        app:showAsAction="ifRoom|collapseActionView"
+        app:iconTint="@color/material_dynamic_primary95"/>
     <item
         android:id="@+id/favorite"
         android:icon="@drawable/ic_favorite"
         android:title="@string/favorite"
-        app:showAsAction="ifRoom|collapseActionView"/>
+        app:showAsAction="ifRoom|collapseActionView"
+        app:iconTint="@color/material_dynamic_primary95"/>
 </menu>
