@@ -57,7 +57,6 @@ class MainActivity : AppCompatActivity(), MovieAdapter.FireBaseDataListener {
                 binding.rvMovie.adapter = adapter
             }
 
-
             override fun onCancelled(error: DatabaseError) {
                 showToast("${error.details} ${error.message}")
             }
@@ -108,17 +107,21 @@ class MainActivity : AppCompatActivity(), MovieAdapter.FireBaseDataListener {
 
     private fun searchMovie(keyword: String?) {
         if (keyword != null) {
-            val searchedMovie = listMovie.filter {
-                it.judul?.contains(keyword, true) == true
+            val searchedMovie = listMovie.filter { movie ->
+                val matchJudul = movie.judul?.contains(keyword, true) ?: false
+                val matchGenre = movie.genre?.contains(keyword, true) ?: false
+                val matchThnRilis = movie.tahunRilis == keyword.toIntOrNull()
+
+                matchJudul || matchGenre || matchThnRilis
             }
+
             if (searchedMovie.isEmpty()) {
                 showToast(getString(R.string.no_movie_found))
             } else {
-                adapter.setSearchedList(searchedMovie as ArrayList<Movie>)
+                adapter.setSearchedList(ArrayList(searchedMovie))
             }
         }
     }
-
 
     companion object {
         const val MOVIE_CHILD = "Film"
